@@ -4,14 +4,15 @@
     box-sizing: border-box;
 }
 /*YT vid 36:25*/
+/*Custom properties that are passed in*/
 :root {
     --ff-primary: 'Architects Daughter', cursive;
-    
+    --ff-secondary: 'Montserrat', sans-serif;
     --fw-reg: 300;
     --fw-bold: 900;
 
     --clr-light: #e5e5e5;
-    --clr-dark: #3d3c3c;
+    --clr-dark: #585656;
     --clr-accent: #590a69ab;
 
     --fs-h1: 3rem;
@@ -29,9 +30,138 @@
     }
 }
 
+/*Applied properties*/
 body {
     background-color: var(--clr-light);
     font-family: var(--ff-primary); 
     margin: 0;
-    font-size: ;
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+strong {
+    font-weight: var(--fw-bold);
+}
+
+h1, h2 {
+    line-height: 1;
+    margin: 0;
+}
+
+h1 {
+    font-size: var(--fs-h1);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+}
+
+
+
+/*General section formatting*/
+section {
+    padding: 5em 2em;
+}
+
+/*Styling the intro title*/
+.section_title_intro {
+    font-weight: var(--fw-reg);
+}
+.section_title_intro strong {
+    display: block;
+}
+
+
+/*styling the subtitles*/
+.section__subtitle__intro,
+.about-para {
+    padding: .25em 1em;
+    font-family: var(--ff-secondary);
+    background-color: var(--clr-accent);
+}
+
+.section__subtitle__intro {
+    font-size: var(--fs-h3);
+}
+
+/*header*/
+nav {
+    display: none;
+}
+
+/*intro*/
+.intro {
+    position: relative;
+}
+
+@media (min-width: 600px) {
+    .intro {
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em ;
+        grid-template-areas: 
+        "img title"
+        "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+    .intro__img {
+        grid-area: img;
+        min-width: 250px;
+    }
+
+    .section__subtitle__intro {
+        align-self: start;
+        grid-column: -1/1;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -1.5em;
+        width: calc(100% + 1.5em);
+    }
+}
+
+/*About Me*/
+
+.about-me {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/*Portfolio pieces*/
+.my-work {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section__title--work {
+    color: var(--clr-accent);
+}
+
+.portfolio {
+    /*display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
+    display: inline-block;
+}
+
+.portfolio__item {
+    overflow: hidden;
+}
+
+.portfolio__img {
+    transition: transform 750ms cubic-bezier(.5,0,.5,1),
+    opacity 250ms linear;
+}
+
+.portfolio__img:hover {
+    transform: scale(1.2);
+    opacity: .75;
 }
