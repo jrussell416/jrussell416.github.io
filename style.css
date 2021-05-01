@@ -176,9 +176,23 @@ nav {
     }
 }
 
+/* My Skills */
+.my-skills {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+}
+
+.skills--table {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    color: var(--clr-dark);
+}
 /*Portfolio pieces*/
 .my-work {
-    background-color: var(--clr-light);
+    background-color: var(--clr-dark);
     color: var(--clr-text);
     max-width: 1000px;
     margin: 0 auto;
