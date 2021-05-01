@@ -7,13 +7,14 @@
 /*Custom properties that are passed in*/
 :root {
     --ff-primary: 'Architects Daughter', cursive;
-    --ff-secondary: 'Montserrat', sans-serif;
+    --ff-secondary: 'Roboto', sans-serif;
     --fw-reg: 300;
     --fw-bold: 900;
 
-    --clr-light: #e5e5e5;
+    --clr-light: #d8d7d7;
     --clr-dark: #585656;
     --clr-accent: #590a69ab;
+    --clr-text: #ffffff;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -131,12 +132,54 @@ nav {
 .about-me {
     max-width: 1000px;
     margin: 0 auto;
+    background-color: var(--clr-dark);
+    color: var(--clr-text);
+}
+
+.about-me__img {
+    box-shadow: var(--bs);
+}
+
+.about--text {
+    font-family: var(--ff-secondary);
+}
+
+@media (min-width: 600px) {
+    .about-me {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas: 
+            "title img"
+            "subtitle img"
+            "text img";
+        grid-column-gap: 2em;
+    }
+    
+    .section__title--about {
+        grid-area: title;
+    }
+    
+    .section__subtitle--about {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        position: relative;
+        left: -1em;
+        width: calc(100% + 2em);
+        padding-left: 1em;
+        padding-right: calc(200px + 4em);
+    }
+    
+    .about-me__img {
+        grid-area: img;
+        position: relative;
+        z-index: 2;
+    }
 }
 
 /*Portfolio pieces*/
 .my-work {
-    background-color: var(--clr-dark);
-    color: var(--clr-light);
+    background-color: var(--clr-light);
+    color: var(--clr-text);
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
@@ -164,4 +207,45 @@ nav {
 .portfolio__img:hover {
     transform: scale(1.2);
     opacity: .75;
+}
+
+.footer {
+    background-color: #e9caad;
+    color: var(--clr-accent);
+    text-align: center;
+    margin-top: 100px;
+    font-size: var(--fs-h3);
+
+}
+
+.footer__link:hover {
+    opacity: .7;
+    text-decoration: underline;
+}
+
+
+
+.social_list li:hover {
+    opacity: .7;
+}
+
+.list_item {
+    margin: 0 1.5em;
+}
+
+.list_link {
+    padding: .5em
+}
+
+.footer__link {
+    font-weight: var(--fw-bold);
+}
+
+.footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul li {
+    display: inline-table;
 }
