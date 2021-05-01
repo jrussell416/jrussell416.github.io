@@ -13,8 +13,10 @@
 
     --clr-light: #d8d7d7;
     --clr-dark: #585656;
-    --clr-accent: #590a69ab;
-    --clr-text: #ffffff;
+    --clr-accent: #a227b8d2;
+    --clr-light-text: #ffffff;
+    --clr-dark-text: #080808;
+
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -72,6 +74,7 @@ section {
 /*Styling the intro title*/
 .section_title_intro {
     font-weight: var(--fw-reg);
+    color: var(--clr-dark);
 }
 .section_title_intro strong {
     display: block;
@@ -88,6 +91,7 @@ section {
 
 .section__subtitle__intro {
     font-size: var(--fs-h3);
+    color: var(--clr-dark);
 }
 
 /*header*/
@@ -133,7 +137,7 @@ nav {
     max-width: 1000px;
     margin: 0 auto;
     background-color: var(--clr-dark);
-    color: var(--clr-text);
+    color: var(--clr-light-text);
 }
 
 .about-me__img {
@@ -189,11 +193,12 @@ nav {
     grid-template-columns: auto auto auto;
     padding: 10px;
     color: var(--clr-dark);
+    
 }
 /*Portfolio pieces*/
 .my-work {
     background-color: var(--clr-dark);
-    color: var(--clr-text);
+    color: var(--clr-light-text);
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
@@ -229,13 +234,14 @@ nav {
     opacity: .5;
 }
 
+/*Footer and Social List*/
+
 .footer {
-    background-color: #e9caad;
     color: var(--clr-accent);
     text-align: center;
-    margin-top: 100px;
+    margin-top: 20px;
     font-size: var(--fs-h3);
-
+    padding: 2.5em 0;
 }
 
 .footer__link:hover {
@@ -247,6 +253,7 @@ nav {
 
 .social_list li:hover {
     opacity: .7;
+    transform: scale(1.5);
 }
 
 .list_item {
