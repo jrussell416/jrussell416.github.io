@@ -395,3 +395,10 @@ header {
     max-width: 1000px;
     margin: 0 auto;
 }
+
+.individual-intro {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-h2);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
