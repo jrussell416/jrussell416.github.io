@@ -42,6 +42,10 @@ body {
     line-height: 1.6;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 img {
     display: block;
     max-width: 100%;
@@ -139,6 +143,38 @@ header {
     color: var(--clr-accent);
 }
 
+.nav-toggle {
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+}
+
+.nav-open .nav {
+    transform: translateX(0);
+}
+
+.nav-open .nav-toggle {
+    position: fixed;
+}
+
+.nav-open .hamburger {
+    transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+    opacity: 0;
+}
+
+
 /*Hamburger*/
 .hamburger {
     display: block;
@@ -148,7 +184,7 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background: var(--clr-dark);
+    background: var(--clr-accent);
     width: 2em;
     height: 3px;
     border-radius: 1em;
@@ -160,8 +196,11 @@ header {
     content: '';
     position: absolute;
     left: 0;
-    right: 0
+    right: 0;
 }
+
+.hamburger::before {top: 6px}
+.hamburger::after {bottom: 6px;}
 /*intro*/
 .intro {
     position: relative;
@@ -180,9 +219,12 @@ header {
     }
     .intro__img {
         grid-area: img;
-        min-width: 250px;
+        min-width: 400px;
+        position: relative;
+        z-index: 2;
     }
 
+  
     .section__subtitle__intro {
         align-self: start;
         grid-column: -1/1;
@@ -260,6 +302,10 @@ header {
     grid-template-columns: auto auto auto;
     padding: 10px;
     color: var(--clr-dark);
+}
+
+.skill-name {
+    font-family: var(--ff-secondary);
 }
 /*Portfolio pieces*/
 .my-work {
@@ -339,4 +385,13 @@ header {
 
 .social-list__link {
     padding: .5em;
+}
+
+/*Case Study Page*/
+
+
+.individual-item {
+    padding: 0 2em 2em;
+    max-width: 1000px;
+    margin: 0 auto;
 }
