@@ -349,7 +349,7 @@ header {
 /*Footer and Social List*/
 
 .footer {
-    color: var(--clr-accent);
+    color: var(--clr-dark);
     text-align: center;
     margin-top: 20px;
     font-size: var(--fs-h3);
