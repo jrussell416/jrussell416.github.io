@@ -11,11 +11,11 @@
     --fw-reg: 300;
     --fw-bold: 900;
 
-    --clr-light: #d8d7d7;
-    --clr-dark: #585656;
+    --clr-light: #f8f0f0;
+    --clr-dark: #363434;
     --clr-accent: #a227b8d2;
-    --clr-light-text: #ffffff;
-    --clr-dark-text: #080808;
+    --clr-light-text: #fcfafa;
+    --clr-dark-text: #363434;
 
 
     --fs-h1: 3rem;
@@ -201,9 +201,15 @@ header {
 
 .hamburger::before {top: 6px}
 .hamburger::after {bottom: 6px;}
+
+
 /*intro*/
 .intro {
     position: relative;
+}
+
+.section__subtitle__intro {
+    display: inline-block;
 }
 
 @media (min-width: 600px) {
@@ -219,7 +225,7 @@ header {
     }
     .intro__img {
         grid-area: img;
-        min-width: 400px;
+        min-width: 250px;
         position: relative;
         z-index: 2;
     }
@@ -239,7 +245,6 @@ header {
 /*About Me*/
 
 .about-me {
-    max-width: 1000px;
     margin: 0 auto;
     background-color: var(--clr-dark);
     color: var(--clr-light-text);
@@ -287,7 +292,6 @@ header {
 
 /* My Skills */
 .my-skills {
-    max-width: 1000px;
     margin: 0 auto;
     background-color: var(--clr-light);
     color: var(--clr-dark);
@@ -306,44 +310,6 @@ header {
 
 .skill-name {
     font-family: var(--ff-secondary);
-}
-/*Portfolio pieces*/
-.my-work {
-    background-color: var(--clr-dark);
-    color: var(--clr-light-text);
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.section__title--work {
-    color: var(--clr-accent);
-}
-
-.portfolio {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.portfolio__item {
-    background: var(--clr-accent);
-    overflow: hidden;
-}
-
-.portfolio__img {
-    transition: transform 750ms cubic-bezier(.5,0,.5,1),
-    opacity 250ms linear;
-}
-
-.portfolio__item:focus {
-    position: relative;
-    z-index: 2;
-}
-
-.portfolio__img:hover,
-.portfolio__item:focus .portfolio__img {
-    transform: scale(1.2);
-    opacity: .5;
 }
 
 /*Footer and Social List*/
@@ -402,3 +368,92 @@ header {
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
+/*Third Portfolio Section*/
+.port__grid {
+    background:var(--clr-dark);
+    padding-bottom: 10px;
+    overflow: auto;
+    color: var(--clr-light);
+    text-align: center;
+}
+
+.card {
+    width: 43%;
+    float: left;
+    margin-left: 50px;
+    position: relative;
+  }
+  
+  
+
+  .card:hover .overlay {
+    opacity: .9;
+}
+
+.overlay a:link {
+    color: #ffffff;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 82%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: purple;
+}
+
+.port:hover .overlay {
+    opacity: .9;
+}
+
+.overlay a:link {
+    color: #ffffff;
+}
+
+.text {
+    color: #ffffff;
+    font-size: 15px;
+    font-family: var(--ff-secondary);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .text {
+        font-size: 11px;
+        color: yellow;
+    }
+
+    .port__grid {
+       overflow: hidden;
+    }
+
+    .port__img__3 {
+        align-items: center;
+    }
+
+    .overlay {
+        width: 100%;    
+    }
+    .card {
+        width: 70%;
+        margin-bottom: 10px;
+    }
+
+    .port__img__3 {
+        align-items: center;
+    }
+}
+
