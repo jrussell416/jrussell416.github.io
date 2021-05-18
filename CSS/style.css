@@ -369,6 +369,8 @@ header {
     margin-bottom: 5px;
 }
 
+
+
 /*Third Portfolio Section*/
 .port__grid {
     background:var(--clr-dark);
@@ -409,9 +411,6 @@ header {
     background-color: purple;
 }
 
-.port:hover .overlay {
-    opacity: .9;
-}
 
 .overlay a:link {
     color: #ffffff;
@@ -432,8 +431,8 @@ header {
 
 @media (max-width: 800px) {
     .text {
-        font-size: 11px;
-        color: yellow;
+        font-size: 12px;
+        color: #ffffff;
     }
 
     .port__grid {
