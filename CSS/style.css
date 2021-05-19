@@ -380,6 +380,7 @@ header {
     text-align: center;
 }
 
+
 .card {
     width: 43%;
     float: left;
@@ -387,8 +388,6 @@ header {
     position: relative;
   }
   
-  
-
   .card:hover .overlay {
     opacity: .9;
 }
@@ -440,11 +439,11 @@ header {
     }
 
     .port__img__3 {
-        align-items: center;
+        max-width: 120%;
     }
 
     .overlay {
-        width: 100%;    
+        width: 120%;    
     }
     .card {
         width: 70%;
