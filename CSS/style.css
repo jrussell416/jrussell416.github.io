@@ -355,6 +355,21 @@ header {
 
 /*Case Study Page*/
 
+.section_title_intro_item {
+    color: var(--clr-dark);
+}
+
+.section__subtitle__intro_item {
+    padding: .25em 1em;
+    font-family: var(--ff-secondary);
+    background-color: var(--clr-accent);
+    font-size: var(--fs-h3);
+}
+
+.intro_item {
+   padding: 3em 2em 0 2em; 
+}
+
 
 .individual-item {
     padding: 0 2em 2em;
@@ -363,13 +378,16 @@ header {
 }
 
 .individual-intro {
-    font-family: var(--ff-primary);
+    font-family: var(--ff-secondary);
     font-size: var(--fs-h2);
     margin-top: 5px;
     margin-bottom: 5px;
+    color: var(--clr-dark);
 }
 
-
+.lesson-img {
+    float: right;
+}
 
 /*Third Portfolio Section*/
 .port__grid {
