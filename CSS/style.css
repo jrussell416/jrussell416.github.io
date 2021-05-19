@@ -389,6 +389,11 @@ header {
     float: right;
 }
 
+.intro-img {
+    float: left;
+    padding-right: 10px;
+}
+
 /*Third Portfolio Section*/
 .port__grid {
     background:var(--clr-dark);
