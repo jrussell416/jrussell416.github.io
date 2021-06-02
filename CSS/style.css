@@ -206,6 +206,7 @@ header {
 /*intro*/
 .intro {
     position: relative;
+    padding-bottom: 0;
 }
 
 .section__subtitle__intro {
@@ -242,6 +243,32 @@ header {
     }
 }
 
+/*Contact info*/
+.contact-list {
+    list-style: none;
+    display: flex;
+    width: auto;
+    justify-content: center;
+    padding: 0;
+    text-align: center;
+}
+.contact-list__link {
+    font-family: var(--ff-secondary);
+    color: var(--clr-dark-text);
+}
+
+.contact-list__item a {
+    text-decoration: none;
+    margin: 0 .5em;
+}
+
+@media (max-width: 600px) {
+    .contact-list {
+        display: grid;
+        width: max -content;
+        margin: 0 auto;
+    }
+}
 /*About Me*/
 
 .about-me {
@@ -367,7 +394,7 @@ header {
 }
 
 .intro_item {
-   padding: 3em 2em 0 2em; 
+   padding: 3em 2em 2em 2em; 
 }
 
 
@@ -377,9 +404,9 @@ header {
     margin: 0 auto;
 }
 
-.individual-intro {
+.section-intro-header {
     font-family: var(--ff-secondary);
-    font-size: var(--fs-h2);
+    font-size: var(--fs-h3);
     margin-top: 5px;
     margin-bottom: 5px;
     color: var(--clr-dark);
@@ -405,9 +432,8 @@ header {
 
 
 .card {
-    width: 43%;
-    float: left;
-    margin-left: 50px;
+    width: 40%;
+    margin: auto;
     position: relative;
   }
   
@@ -415,8 +441,17 @@ header {
     opacity: .9;
 }
 
-.overlay a:link {
-    color: #ffffff;
+.project-links {
+    display: flex;
+    padding: 0 .3em;
+}
+
+#work a:link {
+    color: #f8f41b;
+}
+
+#work a:visited {
+    color: #f8f41b;
 }
 
 
@@ -433,10 +468,6 @@ header {
     background-color: purple;
 }
 
-
-.overlay a:link {
-    color: #ffffff;
-}
 
 .text {
     color: #ffffff;
@@ -471,10 +502,16 @@ header {
     .card {
         width: 70%;
         margin-bottom: 10px;
+        margin-left: 50px;
     }
 
     .port__img__3 {
         align-items: center;
+    }
+
+    .portfolio-links {
+        display: grid;
+        padding: 0 1em;
     }
 }
 
